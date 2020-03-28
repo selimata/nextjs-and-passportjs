@@ -10,7 +10,7 @@ export default () => (
         <main>
             <h3 className="title">Welcome to the Login page!</h3>
             <p className="description">
-                I hope it will succeed to log in if you don't forget to fill <code>.env</code> credentials.
+                I hope it will succeed to login if you don't forget to fill <code><a href="https://github.com/selimata/nextjs-and-passportjs/tree/master/.env">.env</a></code>  credentials.
             </p>
 
             <div className="grid">
@@ -77,7 +77,7 @@ export default () => (
       }
 
       code {
-        background: #fafafa;
+        background: #a2a2a261;
         border-radius: 5px;
         padding: 0.75rem;
         font-size: 1.1rem;
