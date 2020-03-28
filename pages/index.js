@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-const Home = () => (
+export default () => (
   <div className="container">
     <Head>
       <title>Home</title>
@@ -184,5 +184,3 @@ const Home = () => (
     `}</style>
   </div>
 )
-
-export default Home

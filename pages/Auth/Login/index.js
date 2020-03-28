@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-const Login = () => (
+export default () => (
     <div className="container">
         <Head>
             <title>Login</title>
@@ -157,5 +157,3 @@ const Login = () => (
     `}</style>
     </div>
 )
-
-export default Home
