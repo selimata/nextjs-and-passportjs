@@ -1,66 +1,31 @@
 import Head from 'next/head'
 
 const Home = () => (
-  <div className="container">
-    <Head>
-      <title>Create Next App</title>
-      <link rel="icon" href="/favicon.ico" />
-    </Head>
+    <div className="container">
+        <Head>
+            <title>Create Next App</title>
+            <link rel="icon" href="/favicon.ico" />
+        </Head>
 
-    <main>
-      <h3 className="title">Welcome!</h3>
-      <p className="description">
-        Some references about <code>React</code>, <code>NextJS</code> , <code>ExpressJS</code> and <code>PassportJS</code> are below!
-      </p>
+        <main>
+            <h3 className="title">Welcome to the Login page!</h3>
+            <p className="description">
+                I hope it will succeed to log in if you don't forget to fill <code>.env</code> credentials.
+            </p>
 
-      <div className="grid">
-        <a href="https://reactjs.org" className="card">
-          <h3>React &rarr;</h3>
-        </a>
+            <div className="grid">
+                <a href="/auth/facebook" className="card facebook">
+                    <h3>Login with Facebook</h3>
+                </a>
 
-        <a href="https://nextjs.org/docs" className="card">
-          <h3>NextJS &rarr;</h3>
-        </a>
+                <a href="/auth/google" className="card google">
+                    <h3>Login with Google</h3>
+                </a>
+            </div>
 
-        <a href="http://www.passportjs.org/" className="card">
-          <h3>PassportJS &rarr;</h3>
-        </a>
+        </main>
 
-        <a href="https://expressjs.com/" className="card">
-          <h3>ExpressJS &rarr;</h3>
-        </a>
-      </div>
-
-
-      <p className="description">
-        So, let's start test to the project!
-      </p>
-
-      <div className="grid">
-        <a
-          href="/user"
-          className="card"
-          style={{ 'width': 500 }}
-        >
-          <h3>Try go to the <code>User</code> page! &rarr;</h3>
-          <p>
-            Opps! You can't if you not authorized! :)
-          </p>
-        </a>
-        <a
-          href="/login"
-          className="card"
-          style={{ 'width': 500 }}
-        >
-          <h3>Are you not logged in? Come here! &rarr;</h3>
-          <p>
-            Go to the <code>Login</code> page!
-          </p>
-        </a>
-      </div>
-    </main>
-
-    <style jsx>{`
+        <style jsx>{`
       .container {
         min-height: 100vh;
         padding: 0 0.5rem;
@@ -125,12 +90,14 @@ const Home = () => (
         align-items: center;
         justify-content: center;
         flex-wrap: wrap;
-
+        flex-direction:column;
         margin-top: 2rem;
         margin-bottom: 2rem;
       }
 
       .card {
+        color:white !important;
+        width: 600px;
         margin: 1rem;
         flex-basis: 45%;
         padding: 1.5rem;
@@ -140,6 +107,12 @@ const Home = () => (
         border: 1px solid #eaeaea;
         border-radius: 10px;
         transition: color 0.15s ease, border-color 0.15s ease;
+      }
+      .facebook {
+          background: #3b5998;
+      }
+      .google {
+          background: #EA4335;
       }
 
       .card:hover,
@@ -169,7 +142,7 @@ const Home = () => (
       }
     `}</style>
 
-    <style jsx global>{`
+        <style jsx global>{`
       html,
       body {
         padding: 0;
@@ -182,7 +155,7 @@ const Home = () => (
         box-sizing: border-box;
       }
     `}</style>
-  </div>
+    </div>
 )
 
 export default Home
