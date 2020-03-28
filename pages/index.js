@@ -42,7 +42,7 @@ export default () => (
           className="card"
           style={{ 'width': 500 }}
         >
-          <h3>Try go to the <code>User</code> page! &rarr;</h3>
+          <h3>Try go to the <code><a href="https://github.com/selimata/nextjs-and-passportjs/tree/master/pages/User/index.js">User</a></code> page! 👇</h3>
           <p>
             Opps! You can't if you not authorized! :)
           </p>
@@ -52,9 +52,9 @@ export default () => (
           className="card"
           style={{ 'width': 500 }}
         >
-          <h3>Are you not logged in? Come here! &rarr;</h3>
+          <h3>Are you not logged in? Come here! 👇</h3>
           <p>
-            Go to the <code>Login</code> page!
+            Go to the <code><a href="https://github.com/selimata/nextjs-and-passportjs/tree/master/pages/Auth/Loginindex.js">Login</a></code>  page!
           </p>
         </a>
       </div>
@@ -112,7 +112,7 @@ export default () => (
       }
 
       code {
-        background: #fafafa;
+        background: #a2a2a261;
         border-radius: 5px;
         padding: 0.75rem;
         font-size: 1.1rem;
