@@ -7,15 +7,18 @@ const app = next({ dev });
 const handle = app.getRequestHandler();
 
 app.prepare().then(() => {
-  const server = express()
+    const server = express()
 
+    server.all('/login', (req, res) => {
+        return app.render(req, res, '/Auth/Login', req.query)
+    });
 
-  server.all('*', (req, res) => {
-    return handle(req, res)
-  });
+    server.all('*', (req, res) => {
+        return handle(req, res)
+    });
 
-  server.listen(port, err => {
-    if (err) throw err
-    console.log(`> Ready on http://localhost:${port}`)
-  });
+    server.listen(port, err => {
+        if (err) throw err
+        console.log(`> Ready on http://localhost:${port}`)
+    });
 });
